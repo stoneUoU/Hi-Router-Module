@@ -80,8 +80,8 @@ public extension HiRouter {
         
         if let pageClass = HiRouter.moduleAnyClass(module, className: className),
            let pageType = pageClass as? UIViewController.Type {
-            
-            return pageType.routerController(parameters, callBackParameters: callBackParameters)
+            let vc = pageType.routerController(parameters, callBackParameters: callBackParameters);
+            return vc;
         }else {
             return nil
         }

@@ -13,38 +13,34 @@ public func HiLog<T>(_ message: T, _ file: String = #file, _ line: Int = #line) 
     #endif
 }
 
-public let SCREENBOUNDS = UIScreen.main.bounds
-public let SCREENWIDTH = SCREENBOUNDS.width
-public let SCREENHEIGHT = SCREENBOUNDS.height
+public let HiSCREENBOUNDS = UIScreen.main.bounds
+public let HiSCREENWIDTH = HiSCREENBOUNDS.width
+public let HiSCREENHEIGHT = HiSCREENBOUNDS.height
 
-public let IS_IPHONE_X = SCREENWIDTH == 375 && SCREENHEIGHT == 812
+public let HiIPhoneX = HiSCREENWIDTH == 375 && HiSCREENHEIGHT == 812
 
-public let IS_IPHONE_XR_Max = SCREENWIDTH == 414 && SCREENHEIGHT == 896
+public let HiIPhoneXrMax = HiSCREENWIDTH == 414 && HiSCREENHEIGHT == 896
 
-public let IS_IPHONE_Plus = SCREENWIDTH == 414 && SCREENHEIGHT == 736
+public let HiIPhonePlus = HiSCREENWIDTH == 414 && HiSCREENHEIGHT == 736
 
-public let IS_IPHONE_8 = SCREENWIDTH == 375 && SCREENHEIGHT == 667
+public let HiIPhone8 = HiSCREENWIDTH == 375 && HiSCREENHEIGHT == 667
 
-public let IS_IPHONE_SE = SCREENWIDTH == 320 && SCREENHEIGHT == 568
+public let HiIPhoneSe = HiSCREENWIDTH == 320 && HiSCREENHEIGHT == 568
 
-public let IS_IPHONE_12PRO = SCREENWIDTH == 390 && SCREENHEIGHT == 844
+public let HiIPhone12PRO = HiSCREENWIDTH == 390 && HiSCREENHEIGHT == 844
 
-public let IS_IPHONE_12Mini = SCREENWIDTH == 360 && SCREENHEIGHT == 780
+public let HiIPhone12Mini = HiSCREENWIDTH == 360 && HiSCREENHEIGHT == 780
 
-public let IS_IPHONE_12ProMax = SCREENWIDTH == 428 && SCREENHEIGHT == 926
+public let HiIPhone12ProMax = HiSCREENWIDTH == 428 && HiSCREENHEIGHT == 926
 
-public let isIPhoneX = (IS_IPHONE_X || IS_IPHONE_XR_Max || IS_IPHONE_12PRO || IS_IPHONE_12Mini || IS_IPHONE_12ProMax)
+public let isIPhoneX = (HiIPhoneX || HiIPhoneXrMax || HiIPhone12PRO || HiIPhone12Mini || HiIPhone12ProMax)
 
-public let NAVBAR_HEIGHT: CGFloat = isIPhoneX ? 88.0 : 64.0
+public let HiStatusBarH:CGFloat = (isIPhoneX ? 44 : 20)
 
-public let TABBAR_HEIGHT: CGFloat = isIPhoneX ? 83.0 : 49.0
+public let HiNavigationBarH:CGFloat = 44
 
-public let StatusBarH:CGFloat = (isIPhoneX ? 44 : 20)
+public let HiTabBarH:CGFloat = (isIPhoneX ? (49+34) : 49)
 
-public let NavigationBarH:CGFloat = 44
+public let HiTabbarSafeBotM:CGFloat = (isIPhoneX ? (34) : 0)
 
-public let TabBarH:CGFloat = (isIPhoneX ? (49+34) : 49)
-
-public let TabbarSafeBotM:CGFloat = (isIPhoneX ? (34) : 0)
-
-public let StatusBarAndNavigationBarH:CGFloat = (isIPhoneX ? (88) : 64)
+public let HiStatusBarAndNavigationBarH:CGFloat = (isIPhoneX ? (88) : 64)

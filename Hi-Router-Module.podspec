@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'Hi-Router-Module/Classes/**/*'
+  s.source_files = 'Hi-Router-Module/Classes/**/*.{h,m,swift}'
   
   # s.resource_bundles = {
   #   'Hi-Router-Module' => ['Hi-Router-Module/Assets/*.png']
